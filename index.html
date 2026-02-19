@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwani Kumar | Full-Stack & Android Developer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/deco-color/48/portfolio.png">
+    <style>
+        /* CSS-ONLY Replacement for Typewriter */
+        .typewriter-text {
+            border-right: 3px solid var(--primary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--primary-color);
+            }
+        }
+
+        /* Pure CSS reveal on scroll (Fallback for no JS) */
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <span class="gradient-text">AK.</span>Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-custom btn-primary-custom btn-sm mt-2 mt-lg-0"
+                            href="#contact">Hire Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1 class="display-2 fw-bold mb-4">I'm <span class="gradient-text">Ashwani Kumar</span></h1>
+                    <h2 class="h3 mb-4">
+                        <span class="typewriter-text text-primary">Full-Stack & Android Developer</span>
+                    </h2>
+                    <p class="lead text-muted mb-5 pe-lg-5 fs-5">
+                        Building seamless digital experiences across Web and Mobile. Specialized in creating
+                        high-performance Full-Stack applications and Android solutions that users love.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#projects" class="btn btn-custom btn-primary-custom">View My Work</a>
+                        <a href="#contact" class="btn btn-custom btn-outline-custom">Let's Talk</a>
+                    </div>
+                    <div class="social-links mt-5 d-flex gap-4 fs-4">
+                        <a href="https://github.com/Ashwani-Kumar-2508" target="_blank"
+                            class="text-white opacity-75 hover-primary"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ashwanikuma2104/" target="_blank"
+                            class="text-white opacity-75 hover-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/Ashwani_2104" target="_blank"
+                            class="text-white opacity-75 hover-primary"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="hero-img-container text-center">
+                        <div class="hero-shape-blob"></div>
+                        <img src="Ashu.jpeg" alt="Ashwani Kumar"
+                            class="img-fluid rounded-4 border border-1 border-secondary shadow-2xl main-profile-img"
+                            style="width: 400px; height: 500px; object-fit: cover; background: #1e293b;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="glass-card p-2 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+                            alt="Workspace" class="img-fluid rounded-4 shadow-lg hover-scale"
+                            style="min-height: 400px; width: 100%; object-fit: cover; background: #1e293b;">
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <h2 class="display-5 fw-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                    <p class="text-muted mb-4 fs-5">
+                        I am an aspiring Full-Stack and Android Developer currently pursuing my **B.Tech at Lovely
+                        Professional University (LPU)**. I'm in my **6th Semester (3rd Year)**, maintaining a **7.4
+                        CGPA** while building real-world solutions.
+                        I bridge the gap between complex backend logic and elegant frontend design.
+                    </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="p-3 glass-card text-center h-100">
+                                <i class="fas fa-university text-primary mb-2 fs-4"></i>
+                                <h6 class="text-white mb-1">LPU</h6>
+                                <p class="small text-muted mb-0">B.Tech (CSE/IT)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 glass-card text-center h-100">
+                                <i class="fas fa-book-open text-primary mb-2 fs-4"></i>
+                                <h6 class="text-white mb-1">6th Sem</h6>
+                                <p class="small text-muted mb-0">3rd Year Student</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 glass-card text-center h-100">
+                                <i class="fas fa-graduation-cap text-primary mb-2 fs-4"></i>
+                                <h6 class="text-white mb-1">7.4 CGPA</h6>
+                                <p class="small text-muted mb-0">Current Standing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-6 col-md-6">
+                            <div class="p-3 glass-card text-center highlight-on-hover">
+                                <i class="fas fa-project-diagram text-primary mb-2 fs-4"></i>
+                                <h3 class="fw-bold text-primary mb-1">04+</h3>
+                                <p class="small text-muted mb-0">Projects Built</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="p-3 glass-card text-center highlight-on-hover">
+                                <i class="fas fa-certificate text-primary mb-2 fs-4"></i>
+                                <h3 class="fw-bold text-primary mb-1">03+</h3>
+                                <p class="small text-muted mb-0">Certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-custom btn-primary-custom">Hire Me</a>
+                        <a href="https://drive.google.com/file/d/139NT_FBxv0AoamskRA8i1ixYRB0FJbzr/view?usp=sharing"
+                            target="_blank" class="btn btn-custom btn-outline-custom">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-dark">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">My <span class="gradient-text">Skills</span></h2>
+                <p class="text-muted">Tools and technologies I've mastered over the years</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card skill-card h-100 p-4">
+                        <i class="fas fa-layer-group skill-icon"></i>
+                        <h4 class="mb-4 text-white">Frontend</h4>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge">HTML5</span>
+                            <span class="badge">CSS3</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card skill-card h-100 p-4">
+                        <i class="fas fa-server skill-icon"></i>
+                        <h4 class="mb-4 text-white">Backend</h4>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge">Node.js</span>
+                            <span class="badge">Express</span>
+                            <span class="badge">MongoDB</span>
+                            <span class="badge">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card skill-card h-100 p-4">
+                        <i class="fab fa-android skill-icon"></i>
+                        <h4 class="mb-4 text-white">Android</h4>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge">Java</span>
+                            <span class="badge">Kotlin</span>
+                            <span class="badge">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Recent <span class="gradient-text">Projects</span></h2>
+                <p class="text-muted">A showcase of my recent work across web and mobile platforms</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1: FlowGuard -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
+                                alt="FlowGuard" class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Ashwani-Kumar-2508/FlowGuard" target="_blank"
+                                    class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-white">FlowGuard</h5>
+                            <p class="small text-muted mb-3">Intelligent IoT-based water management and monitoring
+                                system for real-time tracking.</p>
+                            <div class="d-flex gap-2">
+                                <span class="small text-primary fw-bold">#IoT</span>
+                                <span class="small text-primary fw-bold">#Monitoring</span>
+                                <span class="small text-primary fw-bold">#MERN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: UniGather -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
+                                alt="UniGather" class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Gomit-Dev/UniGather" target="_blank"
+                                    class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-white">UniGather</h5>
+                            <p class="small text-muted mb-3">A localized event calendar application specifically
+                                designed for university interactions.</p>
+                            <div class="d-flex gap-2">
+                                <span class="small text-primary fw-bold">#University</span>
+                                <span class="small text-primary fw-bold">#Events</span>
+                                <span class="small text-primary fw-bold">#Android</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: RealTime Process Monitor -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
+                                alt="RealTime Process Monitor" class="project-img">
+                            <div class="project-overlay">
+                                <a href="https://github.com/Ashwani-Kumar-2508/RealTime-Process-Monitor" target="_blank"
+                                    class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="fw-bold text-white">RealTime Process Monitor</h5>
+                            <p class="small text-muted mb-3">A real-time dashboard for monitoring system processes, CPU
+                                usage, and memory consumption.</p>
+                            <div class="d-flex gap-2">
+                                <span class="small text-primary fw-bold">#System</span>
+                                <span class="small text-primary fw-bold">#Monitoring</span>
+                                <span class="small text-primary fw-bold">#Dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                    <p class="text-muted mb-5 fs-5">Have a project in mind? Let's talk about how I can help you build
+                        something amazing.</p>
+                    <div class="d-flex mb-4 highlight-on-hover">
+                        <div class="me-4 text-primary fs-3"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h5 class="text-white">Email</h5>
+                            <p class="text-muted mb-0">ashwanikumar821098@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4 highlight-on-hover">
+                        <div class="me-4 text-primary fs-3"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h5 class="text-white">Phone</h5>
+                            <p class="text-muted mb-0">+91 8210985850</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="glass-card p-4 p-md-5">
+                        <form class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name"
+                                        required></div>
+                                <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email"
+                                        required></div>
+                                <div class="col-12"><textarea class="form-control" rows="5" placeholder="Your Message"
+                                        required></textarea></div>
+                                <div class="col-12"><button type="submit"
+                                        class="btn btn-custom btn-primary-custom w-100 py-3">Send Message</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 border-top border-secondary border-opacity-10 text-center">
+        <div class="container">
+            <h3 class="fw-bold mb-4"><span class="gradient-text">AK.</span>Portfolio</h3>
+            <div class="d-flex justify-content-center gap-4 mb-4 fs-4">
+                <a href="https://github.com/Ashwani-Kumar-2508" target="_blank" class="text-muted hover-primary"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ashwanikuma2104/" target="_blank"
+                    class="text-muted hover-primary"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/Ashwani_2104" target="_blank" class="text-muted hover-primary"><i
+                        class="fab fa-x-twitter"></i></a>
+            </div>
+            <p class="text-muted mb-0">&copy; 2024 Ashwani Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
