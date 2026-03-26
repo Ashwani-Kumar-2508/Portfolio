@@ -30,10 +30,30 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: var(--bg-dark);
+    background: linear-gradient(-45deg, #022c22, #042f2e, #0f172a, #064e3b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* 3D Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    pointer-events: none;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Custom Scrollbar */
@@ -388,6 +408,11 @@ section h2 {
 
     .hero-img-container {
         margin-top: 4rem;
+    }
+    
+    .main-profile-img {
+        width: 250px !important;
+        height: 250px !important;
     }
 }
 

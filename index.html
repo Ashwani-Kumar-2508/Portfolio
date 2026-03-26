@@ -57,6 +57,9 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
+    
+    <!-- 3D Animated Background -->
+    <canvas id="bg-canvas"></canvas>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top glass-nav">
@@ -73,9 +76,10 @@
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#certificates">Certificates</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-custom btn-primary-custom btn-sm mt-2 mt-lg-0"
-                            href="#contact">Hire Me</a></li>
+                            href="https://drive.google.com/file/d/139NT_FBxv0AoamskRA8i1ixYRB0FJbzr/view?usp=sharing" target="_blank">Download CV</a></li>
                 </ul>
             </div>
         </div>
@@ -111,8 +115,8 @@
                     <div class="hero-img-container text-center">
                         <div class="hero-shape-blob"></div>
                         <img src="Ashu.jpeg" alt="Ashwani Kumar"
-                            class="img-fluid rounded-4 border border-1 border-secondary shadow-2xl main-profile-img"
-                            style="width: 400px; height: 500px; object-fit: cover; background: #1e293b;">
+                            class="img-fluid rounded-circle border border-2 border-secondary shadow-2xl main-profile-img"
+                            style="width: 350px; height: 350px; object-fit: cover; background: #1e293b;">
                     </div>
                 </div>
             </div>
@@ -165,18 +169,22 @@
 
                     <div class="row g-4 mb-5">
                         <div class="col-6 col-md-6">
-                            <div class="p-3 glass-card text-center highlight-on-hover">
-                                <i class="fas fa-project-diagram text-primary mb-2 fs-4"></i>
-                                <h3 class="fw-bold text-primary mb-1">04+</h3>
-                                <p class="small text-muted mb-0">Projects Built</p>
-                            </div>
+                            <a href="#projects" class="text-decoration-none">
+                                <div class="p-3 glass-card text-center highlight-on-hover">
+                                    <i class="fas fa-project-diagram text-primary mb-2 fs-4"></i>
+                                    <h3 class="fw-bold text-primary mb-1">04+</h3>
+                                    <p class="small text-muted mb-0">Projects Built</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-6 col-md-6">
-                            <div class="p-3 glass-card text-center highlight-on-hover">
-                                <i class="fas fa-certificate text-primary mb-2 fs-4"></i>
-                                <h3 class="fw-bold text-primary mb-1">03+</h3>
-                                <p class="small text-muted mb-0">Certifications</p>
-                            </div>
+                            <a href="#certificates" class="text-decoration-none">
+                                <div class="p-3 glass-card text-center highlight-on-hover">
+                                    <i class="fas fa-certificate text-primary mb-2 fs-4"></i>
+                                    <h3 class="fw-bold text-primary mb-1">21+</h3>
+                                    <p class="small text-muted mb-0">Certifications</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="d-flex gap-3">
@@ -198,7 +206,7 @@
             </div>
 
             <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="glass-card skill-card h-100 p-4">
                         <i class="fas fa-layer-group skill-icon"></i>
                         <h4 class="mb-4 text-white">Frontend</h4>
@@ -210,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="glass-card skill-card h-100 p-4">
                         <i class="fas fa-server skill-icon"></i>
                         <h4 class="mb-4 text-white">Backend</h4>
@@ -222,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="glass-card skill-card h-100 p-4">
                         <i class="fab fa-android skill-icon"></i>
                         <h4 class="mb-4 text-white">Android</h4>
@@ -230,6 +238,18 @@
                             <span class="badge">Java</span>
                             <span class="badge">Kotlin</span>
                             <span class="badge">Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card skill-card h-100 p-4">
+                        <i class="fas fa-users skill-icon"></i>
+                        <h4 class="mb-4 text-white">Soft Skills</h4>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
+                            <span class="badge">Communication</span>
+                            <span class="badge">Teamwork</span>
+                            <span class="badge">Problem Solving</span>
+                            <span class="badge">Adaptability</span>
                         </div>
                     </div>
                 </div>
@@ -247,8 +267,8 @@
 
             <div class="row g-4">
                 <!-- Project 1: FlowGuard -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="glass-card project-card">
+                <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card project-card h-100">
                         <div class="project-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
                                 alt="FlowGuard" class="project-img">
@@ -257,11 +277,10 @@
                                     class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
                             </div>
                         </div>
-                        <div class="p-4">
+                        <div class="p-4 d-flex flex-column" style="flex: 1;">
                             <h5 class="fw-bold text-white">FlowGuard</h5>
-                            <p class="small text-muted mb-3">Intelligent IoT-based water management and monitoring
-                                system for real-time tracking.</p>
-                            <div class="d-flex gap-2">
+                            <p class="small text-muted mb-3 flex-grow-1">Intelligent IoT-based water management and monitoring system for real-time tracking.</p>
+                            <div class="d-flex gap-2 flex-wrap mt-auto">
                                 <span class="small text-primary fw-bold">#IoT</span>
                                 <span class="small text-primary fw-bold">#Monitoring</span>
                                 <span class="small text-primary fw-bold">#MERN</span>
@@ -270,8 +289,8 @@
                     </div>
                 </div>
                 <!-- Project 2: UniGather -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="glass-card project-card">
+                <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card project-card h-100">
                         <div class="project-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop"
                                 alt="UniGather" class="project-img">
@@ -280,11 +299,10 @@
                                     class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
                             </div>
                         </div>
-                        <div class="p-4">
+                        <div class="p-4 d-flex flex-column" style="flex: 1;">
                             <h5 class="fw-bold text-white">UniGather</h5>
-                            <p class="small text-muted mb-3">A localized event calendar application specifically
-                                designed for university interactions.</p>
-                            <div class="d-flex gap-2">
+                            <p class="small text-muted mb-3 flex-grow-1">A localized event calendar application specifically designed for university interactions.</p>
+                            <div class="d-flex gap-2 flex-wrap mt-auto">
                                 <span class="small text-primary fw-bold">#University</span>
                                 <span class="small text-primary fw-bold">#Events</span>
                                 <span class="small text-primary fw-bold">#Android</span>
@@ -293,8 +311,8 @@
                     </div>
                 </div>
                 <!-- Project 3: RealTime Process Monitor -->
-                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="glass-card project-card">
+                <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card project-card h-100">
                         <div class="project-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop"
                                 alt="RealTime Process Monitor" class="project-img">
@@ -303,16 +321,196 @@
                                     class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
                             </div>
                         </div>
-                        <div class="p-4">
+                        <div class="p-4 d-flex flex-column" style="flex: 1;">
                             <h5 class="fw-bold text-white">RealTime Process Monitor</h5>
-                            <p class="small text-muted mb-3">A real-time dashboard for monitoring system processes, CPU
-                                usage, and memory consumption.</p>
-                            <div class="d-flex gap-2">
+                            <p class="small text-muted mb-3 flex-grow-1">A real-time dashboard for monitoring system processes, CPU usage, and memory consumption.</p>
+                            <div class="d-flex gap-2 flex-wrap mt-auto">
                                 <span class="small text-primary fw-bold">#System</span>
                                 <span class="small text-primary fw-bold">#Monitoring</span>
                                 <span class="small text-primary fw-bold">#Dashboard</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- Project 4: Local Market -->
+                <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="glass-card project-card h-100">
+                        <div class="project-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=2072&auto=format&fit=crop"
+                                alt="Local Market" class="project-img">
+                            <div class="project-overlay d-flex flex-column justify-content-center align-items-center gap-2">
+                                <a href="https://github.com/Ashwani-Kumar-2508/local-Market" target="_blank"
+                                    class="btn btn-primary-custom btn-custom btn-sm">GitHub Code</a>
+                                <a href="https://localshopfront.vercel.app/" target="_blank"
+                                    class="btn btn-outline-light btn-sm mx-2" style="border-radius: 6px;">Live Demo <i class="fas fa-external-link-alt ms-1"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4 d-flex flex-column" style="flex: 1;">
+                            <h5 class="fw-bold text-white">Local Market</h5>
+                            <p class="small text-muted mb-3 flex-grow-1">A comprehensive e-commerce platform connecting users with nearby shops. Features seamless checkout, dynamic live searching, and an interactive interface.</p>
+                            <div class="d-flex gap-2 flex-wrap mt-auto">
+                                <span class="small text-primary fw-bold">#E-commerce</span>
+                                <span class="small text-primary fw-bold">#MERN</span>
+                                <span class="small text-primary fw-bold">#FullStack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">My <span class="gradient-text">Certificates</span></h2>
+                <p class="text-muted">Certifications validating my expertise</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Certificate 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-certificate display-4 mb-3 text-primary"></i>
+                        <h5 class="fw-bold text-white mb-3">Angular and next js</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Angular and next js concepts.</p>
+                        <a href="https://drive.google.com/file/d/1p_Op9rwHJ07hv5bJNhK527OGCOnD0b7y/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-award display-4 mb-3 text-secondary"></i>
+                        <h5 class="fw-bold text-white mb-3">Cloud Computing NPTEL</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Cloud Computing NPTEL concepts.</p>
+                        <a href="https://drive.google.com/file/d/18N8g3G170rcR0zIDslx63e0ITii_iYWh/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-medal display-4 mb-3 text-info"></i>
+                        <h5 class="fw-bold text-white mb-3">Coursera Bits and Bytes</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Coursera Bits and Bytes concepts.</p>
+                        <a href="https://drive.google.com/file/d/1TlJ_MY5zMi2Ot8JSC4lvw62iFnPJDwhf/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-star display-4 mb-3 text-warning"></i>
+                        <h5 class="fw-bold text-white mb-3">Coursera Digital System</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Coursera Digital System concepts.</p>
+                        <a href="https://drive.google.com/file/d/1sI3MSTspCRegSv0mhQp_6KWy2wzkFy0y/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-graduation-cap display-4 mb-3 text-success"></i>
+                        <h5 class="fw-bold text-white mb-3">Coursera Fundamental Network</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Coursera Fundamental Network concepts.</p>
+                        <a href="https://drive.google.com/file/d/1L0Dhya0uhyA_z5QbxLm5pY57U1pzV_Ok/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-certificate display-4 mb-3 text-danger"></i>
+                        <h5 class="fw-bold text-white mb-3">Coursera Hardware and operating System</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Coursera Hardware and operating System concepts.</p>
+                        <a href="https://drive.google.com/file/d/1CkJMVIybGk2saVvC6nhaydiLvsJH2sCe/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 7 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-award display-4 mb-3 text-primary"></i>
+                        <h5 class="fw-bold text-white mb-3">DataStructure</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of DataStructure concepts.</p>
+                        <a href="https://drive.google.com/file/d/19QUBt_DTv322HzBcwHJRHJnSa9CTSAM9/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 8 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-medal display-4 mb-3 text-secondary"></i>
+                        <h5 class="fw-bold text-white mb-3">Generative AI apps</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Generative AI apps concepts.</p>
+                        <a href="https://drive.google.com/file/d/1J66udBwJjZN812joiemM-SSuF5tBvqMQ/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 9 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-star display-4 mb-3 text-info"></i>
+                        <h5 class="fw-bold text-white mb-3">Infosys Build Generative AI</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Infosys Build Generative AI concepts.</p>
+                        <a href="https://drive.google.com/file/d/1boAwhUSxVR14liydtqdVXYm4p6am_Meu/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 10 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-graduation-cap display-4 mb-3 text-warning"></i>
+                        <h5 class="fw-bold text-white mb-3">Infosys Computational Theory</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Infosys Computational Theory concepts.</p>
+                        <a href="https://drive.google.com/file/d/12YMmgYUS_L-JoDtdKSJ8bOu6wRKETItr/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 11 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-certificate display-4 mb-3 text-success"></i>
+                        <h5 class="fw-bold text-white mb-3">Java</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Java concepts.</p>
+                        <a href="https://drive.google.com/file/d/1_cSvXLl42zaGhjcTsFX1yNYk1D_ReOkF/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 12 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-award display-4 mb-3 text-danger"></i>
+                        <h5 class="fw-bold text-white mb-3">MongoDB</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of MongoDB concepts.</p>
+                        <a href="https://drive.google.com/file/d/1v_QTtPcVk9K46KP7arv3xWwRVmgCTCHn/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 13 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-medal display-4 mb-3 text-primary"></i>
+                        <h5 class="fw-bold text-white mb-3">Object Oriented Programming</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Object Oriented Programming concepts.</p>
+                        <a href="https://drive.google.com/file/d/1PZUFKTqlwPhpmP51JJnCclyuK0UoId_8/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 14 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-star display-4 mb-3 text-secondary"></i>
+                        <h5 class="fw-bold text-white mb-3">Responsive Web Page Bootstrap</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Responsive Web Page Bootstrap concepts.</p>
+                        <a href="https://drive.google.com/file/d/18CYZwlYt7NjETU_Rdj3vHBc2NYL4vlaz/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 15 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-graduation-cap display-4 mb-3 text-info"></i>
+                        <h5 class="fw-bold text-white mb-3">Schema Design and Pattern</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Schema Design and Pattern concepts.</p>
+                        <a href="https://drive.google.com/file/d/1ySEDMuKwQik6YP_AkLqPZCGXIGKAAbtq/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
+                    </div>
+                </div>
+                <!-- Certificate 16 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 text-center h-100">
+                        <i class="fas fa-certificate display-4 mb-3 text-warning"></i>
+                        <h5 class="fw-bold text-white mb-3">Udemy Gen AI</h5>
+                        <p class="small text-muted mb-4">Certification validating expertise and understanding of Udemy Gen AI concepts.</p>
+                        <a href="https://drive.google.com/file/d/1lZXNI6zaB8vHwZKkkXONF4d-z3wYpUAD/view?usp=sharing" target="_blank" class="btn btn-outline-custom w-100">View Certificate</a>
                     </div>
                 </div>
             </div>
@@ -398,6 +596,106 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Reliable Custom ScrollSpy
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-50% 0px -50% 0px', // Trigger when section is around middle of screen
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${entry.target.id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+    
+    <!-- Three.js for 3D Objects in Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script>
+        const canvas = document.getElementById('bg-canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+        
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.setZ(30);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(20, 20, 20);
+        scene.add(ambientLight, pointLight);
+
+        const objects = [];
+        const geometries = [
+            new THREE.TorusGeometry(3, 1, 16, 50),
+            new THREE.IcosahedronGeometry(4, 0),
+            new THREE.OctahedronGeometry(5, 0),
+            new THREE.TetrahedronGeometry(4, 0),
+            new THREE.DodecahedronGeometry(4, 0)
+        ];
+        
+        const material = new THREE.MeshStandardMaterial({ 
+            color: 0x38bdf8, 
+            wireframe: true,
+            transparent: true,
+            opacity: 0.15
+        });
+
+        // Add 20 random 3D objects floating around
+        for(let i=0; i<20; i++) {
+            const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+            const mesh = new THREE.Mesh(geometry, material);
+            
+            mesh.position.x = (Math.random() - 0.5) * 100;
+            mesh.position.y = (Math.random() - 0.5) * 100;
+            mesh.position.z = (Math.random() - 0.5) * 60 - 10;
+            
+            mesh.rotation.x = Math.random() * 2 * Math.PI;
+            mesh.rotation.y = Math.random() * 2 * Math.PI;
+            
+            scene.add(mesh);
+            objects.push({
+                mesh: mesh,
+                rotSpeedX: (Math.random() - 0.5) * 0.01,
+                rotSpeedY: (Math.random() - 0.5) * 0.01,
+                floatSpeedY: (Math.random() - 0.5) * 0.05
+            });
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            objects.forEach(obj => {
+                obj.mesh.rotation.x += obj.rotSpeedX;
+                obj.mesh.rotation.y += obj.rotSpeedY;
+                obj.mesh.position.y += obj.floatSpeedY;
+                
+                if(obj.mesh.position.y > 60) obj.mesh.position.y = -60;
+                if(obj.mesh.position.y < -60) obj.mesh.position.y = 60;
+            });
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
         });
     </script>
 </body>
