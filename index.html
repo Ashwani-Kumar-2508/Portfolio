@@ -79,7 +79,7 @@
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#certificates">Certificates</a></li>
                     <li class="nav-item"><a class="nav-link text-uppercase fs-6 px-3" href="#contact">Contact</a></li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-custom btn-primary-custom btn-sm mt-2 mt-lg-0"
-                            href="https://drive.google.com/file/d/139NT_FBxv0AoamskRA8i1ixYRB0FJbzr/view?usp=sharing" target="_blank">Download CV</a></li>
+                            href="https://drive.google.com/file/d/1pFW-1t8Q8CewgJS91vH25Xb3pLMq0x-j/view?usp=sharing" target="_blank">Download CV</a></li>
                 </ul>
             </div>
         </div>
@@ -189,7 +189,7 @@
                     </div>
                     <div class="d-flex gap-3">
                         <a href="#contact" class="btn btn-custom btn-primary-custom">Hire Me</a>
-                        <a href="https://drive.google.com/file/d/139NT_FBxv0AoamskRA8i1ixYRB0FJbzr/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1pFW-1t8Q8CewgJS91vH25Xb3pLMq0x-j/view?usp=sharing"
                             target="_blank" class="btn btn-custom btn-outline-custom">Download CV</a>
                     </div>
                 </div>
@@ -266,7 +266,12 @@
     <section id="projects" class="py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Recent <span class="gradient-text">Projects</span></h2>
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-2">
+                    <h2 class="display-5 fw-bold mb-0">Recent <span class="gradient-text">Projects</span></h2>
+                    <button class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#addProjectModal" style="width: 45px; height: 45px; border-width: 2px;" title="Add New Project">
+                        <i class="fas fa-plus fs-5"></i>
+                    </button>
+                </div>
                 <p class="text-muted">A showcase of my recent work across web and mobile platforms</p>
             </div>
 
@@ -364,6 +369,43 @@
             </div>
         </div>
     </section>
+
+    <!-- Add Project Modal -->
+    <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border border-secondary border-opacity-25 rounded-4 shadow-lg">
+                <div class="modal-header border-bottom border-secondary border-opacity-25">
+                    <h5 class="modal-title fw-bold" id="addProjectModalLabel">Add New Project</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="addProjectForm">
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label text-muted">Project Name</label>
+                            <input type="text" class="form-control bg-transparent text-white border-secondary" id="projectName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDesc" class="form-label text-muted">Description</label>
+                            <textarea class="form-control bg-transparent text-white border-secondary" id="projectDesc" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectImg" class="form-label text-muted">Image URL</label>
+                            <input type="url" class="form-control bg-transparent text-white border-secondary" id="projectImg" required placeholder="https://...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectGit" class="form-label text-muted">GitHub Link</label>
+                            <input type="url" class="form-control bg-transparent text-white border-secondary" id="projectGit" required placeholder="https://...">
+                        </div>
+                        <div class="mb-4">
+                            <label for="projectLive" class="form-label text-muted">Live Link (Optional)</label>
+                            <input type="url" class="form-control bg-transparent text-white border-secondary" id="projectLive" placeholder="https://...">
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-primary-custom w-100 py-2 fw-bold">Add Project</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Certificates Section -->
     <section id="certificates" class="py-5">
@@ -627,6 +669,56 @@
         }, observerOptions);
 
         sections.forEach(sec => observer.observe(sec));
+
+        // Handle Add Project Form Submission
+        document.getElementById('addProjectForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('projectName').value;
+            const desc = document.getElementById('projectDesc').value;
+            const img = document.getElementById('projectImg').value;
+            const git = document.getElementById('projectGit').value;
+            const live = document.getElementById('projectLive').value;
+            
+            let liveBtnHtml = '';
+            let overlayClass = '';
+            if (live) {
+                liveBtnHtml = `<a href="${live}" target="_blank" class="btn btn-outline-light btn-sm mx-2" style="border-radius: 6px;">Live <i class="fas fa-external-link-alt ms-1"></i></a>`;
+                overlayClass = 'd-flex flex-column justify-content-center align-items-center gap-2';
+            }
+
+            const newCardHtml = `
+                <div class="col-lg-6 col-xl-3" data-aos="zoom-in">
+                    <div class="glass-card project-card h-100">
+                        <div class="project-img-wrapper">
+                            <img src="${img}" alt="${name}" class="project-img" style="object-fit: cover; width: 100%; height: 100%;">
+                            <div class="project-overlay ${overlayClass}">
+                                <a href="${git}" target="_blank" class="btn btn-primary-custom btn-custom btn-sm mx-2">GitHub Code</a>
+                                ${liveBtnHtml}
+                            </div>
+                        </div>
+                        <div class="p-4 d-flex flex-column" style="flex: 1;">
+                            <h5 class="fw-bold text-white">${name}</h5>
+                            <p class="small text-muted mb-3 flex-grow-1">${desc}</p>
+                            <div class="d-flex gap-2 flex-wrap mt-auto">
+                                <span class="small text-primary fw-bold">#New</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const projectsContainer = document.querySelector('#projects .row.g-4');
+            projectsContainer.insertAdjacentHTML('beforeend', newCardHtml);
+            
+            // Close modal
+            const modalEl = document.getElementById('addProjectModal');
+            const modalInstance = bootstrap.Modal.getInstance(modalEl);
+            modalInstance.hide();
+            
+            // Reset form
+            this.reset();
+        });
     </script>
     
     <!-- Three.js for 3D Objects in Background -->
